@@ -31,14 +31,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Account</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="text" placeholder="Username" aria-label="username">
+                        <input class="form-control me-2" type="password" placeholder="Password" aria-label="password">
+                        <button class="btn btn-outline-success" type="submit">Login</button>
                     </form>
+                    <button class="btn btn-outline-success me-2" type="button">Sign up</button>
                 </div>
             </div>
         </nav>
@@ -64,7 +63,41 @@
                                 <div id="collapseOne" class="accordion-collapse collapse"
                                     aria-labelledby="recipe01Details" data-bs-parent="#recipe01Accordion">
                                     <div class="accordion-body">
-
+                                        <div id="recipeData">
+                                            <div class="row m-2">
+                                                <div class="col-auto">
+                                                    <div style="height: 300px;">
+                                                        <img src="http://placehold.it/400x300/CCCCCC/CCCCCC" alt="..."
+                                                            class="img-thumbnail mh-100" />
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <h2>Recipe Title</h2>
+                                                    <h3>Posted By:</h3>
+                                                    <h4>User Name</h4>
+                                                    <h3>Description:</h3>
+                                                    <h4>Short Desc</h4>
+                                                    <h3>Prep Time:</h3>
+                                                    <h4>Example Minutes</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row m-2">
+                                                <div class="col">
+                                                    <h2>Ingredients:</h2>
+                                                    <ul id="recipeIngredients">
+                                                        <li>Item 1</li>
+                                                        <li>Item 2</li>
+                                                    </ul>
+                                                    <h2>Instructions</h2>
+                                                    <ol>
+                                                        <li>direction 1</li>
+                                                        <li>direction 2</li>
+                                                    </ol>
+                                                </div>
+                            
+                                    
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -87,6 +120,41 @@
                                 <div id="collapse2" class="accordion-collapse collapse"
                                     aria-labelledby="recipe02Details" data-bs-parent="#recipe02Accordion">
                                     <div class="accordion-body">
+                                        <div id="recipeData">
+                                            <div class="row m-2">
+                                                <div class="col-auto">
+                                                    <div style="height: 300px;">
+                                                        <img src="http://placehold.it/400x300/CCCCCC/CCCCCC" alt="..."
+                                                            class="img-thumbnail mh-100" />
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <h2>Recipe Title</h2>
+                                                    <h3>Posted By:</h3>
+                                                    <h4>User Name</h4>
+                                                    <h3>Description:</h3>
+                                                    <h4>Short Desc</h4>
+                                                    <h3>Prep Time:</h3>
+                                                    <h4>Example Minutes</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row m-2">
+                                                <div class="col">
+                                                    <h2>Ingredients:</h2>
+                                                    <ul id="recipeIngredients">
+                                                        <li>Item 1</li>
+                                                        <li>Item 2</li>
+                                                    </ul>
+                                                    <h2>Instructions</h2>
+                                                    <ol>
+                                                        <li>direction 1</li>
+                                                        <li>direction 2</li>
+                                                    </ol>
+                                                </div>
+                            
+                                    
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -109,12 +177,71 @@
                                 <div id="collapse3" class="accordion-collapse collapse"
                                     aria-labelledby="recipe02Details" data-bs-parent="#recipe03Accordion">
                                     <div class="accordion-body">
+                                        <div id="recipeData">
+                                            <div class="row m-2">
+                                                <div class="col-auto">
+                                                    <div style="height: 300px;">
+                                                        <img src="http://placehold.it/400x300/CCCCCC/CCCCCC" alt="..."
+                                                            class="img-thumbnail mh-100" />
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <h2>Recipe Title</h2>
+                                                    <h3>Posted By:</h3>
+                                                    <h4>User Name</h4>
+                                                    <h3>Description:</h3>
+                                                    <h4>Short Desc</h4>
+                                                    <h3>Prep Time:</h3>
+                                                    <h4>Example Minutes</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row m-2">
+                                                <div class="col">
+                                                    <h2>Ingredients:</h2>
+                                                    <ul id="recipeIngredients">
+                                                        <li>Item 1</li>
+                                                        <li>Item 2</li>
+                                                    </ul>
+                                                    <h2>Instructions</h2>
+                                                    <ol>
+                                                        <li>direction 1</li>
+                                                        <li>direction 2</li>
+                                                    </ol>
+                                                </div>
+                            
+                                    
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="col m-2">
+                <div class="card">
+                    <div class="card-body m-2">
+                        <form>
+                            <div class="form-group">
+                                <label for="search">Search</label>
+                                <input type="input" class="form-control" id="recipeTitle" aria-describedby="recipeTitle" placeholder="Enter a recipe">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="recipeTag">Tags</label>
+                                <select class="form-control" id="recipeTag">
+                                    <option>Select a tag</option>
+                                    <option>Tag1</option>
+                                    <option>Tag2</option>
+                                    <option>Tag3</option>
+                                    <option>Tag4</option>
+                                    <option>Tag5</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2">Search</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
