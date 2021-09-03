@@ -1,23 +1,26 @@
 // Require express and create an instance of it
-var express = require('express');
-var app = express();
+const path = require('path');
+const express = require('express');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
 
-// on the request to root (localhost:3000/)
-app.get('/', function (req, res) {
-    res.send('<b>My</b> first express http server');
-});
+const sequelize = require('./config/connection');
 
-// On localhost:3000/welcome
-app.get('/welcome', function (req, res) {
-    res.send('<b>Hello</b> welcome to my http server made with express');
-});
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Change the 404 message modifing the middleware
-app.use(function (req, res, next) {
-    res.status(404).send("Sorry, that route doesn't exist. Have a nice day :)");
-});
+const hbs = exphbs.create();
 
-// start the server in the port 3000 !
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000.');
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });

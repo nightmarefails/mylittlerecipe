@@ -9,9 +9,7 @@ router.get('/', async (req, res) => {
 
         const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
         
-        res.render('main', {
-            recipes
-        })
+        res.status(200).json(recipes);
 
     } catch (err) {
         res.status(500).json(err);
