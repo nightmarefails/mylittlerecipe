@@ -1,41 +1,37 @@
-const {Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class recipe_tags extends Model {}
+class recipe_tags extends Model { }
 
 recipe_tags.init(
     {
-       id: {
-           type: DataTypes.INTEGER,
-             autoIncrement: true,
-           allowNull: false,
-       },
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false,
+        },
+        recipe_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            refrences: {
+                model: 'Recipe',
+                key: 'id',
+            }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
 
-       recipe_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        refrences: {
-            model: 'Recipe',
-            key: 'id',
-        }
-    },
-
-       user_id:{
-        type:DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        
-       },
-      
-     
-       
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User',
+        modelName: 'recipe_tag',
     }
 );
 
