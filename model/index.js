@@ -4,7 +4,7 @@ const user_recipe = require('./user_recipe');
 const recipe_tags = require('./recipe_tags');
 const Tags = require('./tags');
 
-User.hasMany(Recipe, {
+User.belongsToMany(Recipe, {
     through: user_recipe,
     foreignKey: 'recipe_id'
 });

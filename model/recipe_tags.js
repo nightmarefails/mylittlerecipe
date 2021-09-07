@@ -15,7 +15,7 @@ recipe_tags.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             refrences: {
-                model: 'Recipe',
+                model: 'recipe',
                 key: 'id',
             }
         },

@@ -20,7 +20,9 @@
             "Preheat an outdoor grill for medium-high heat and lightly oil grate. Thread shrimp and pineapple alternately onto skewers and place on a platter.",
             "Arrange skewers on the hot grate. Grill 2 to 3 minutes per side, or until shrimp is opaque and cooked through. Turn grill to low heat and brush sauce on both sides of skewers. Transfer to a serving platter and sprinkle with cilantro and sesame seeds."
         ],
-        "tags": [],
+        "tags": [
+            "Grill"
+        ],
         "time": {
             "prep": "25 mins ",
             "cook": "20 mins ",
@@ -84,7 +86,7 @@
             "Stir half of the shredded cheese and the Italian seasoning into the browned sausage. Spoon mixture into the pasta shells (1 to 2 tablespoons per shell). Arrange stuffed shells in prepared baking dish. Pour marinara sauce evenly over the shells. Top with remaining shredded cheese. Cover tightly with aluminum foil.",
             "Bake in preheated oven until heated through and bubbly, about 30 minutes. Remove foil; bake until browned, 5 to 10 more minutes. Sprinkle with a pinch of Italian seasoning, if desired."
         ],
-        "tags": [],
+        "tags": ["soup"],
         "time": {
             "prep": "",
             "cook": "",
@@ -95,5 +97,51 @@
         },
         "servings": "8",
         "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=%5B1380%2C550%5D&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F08%2F10%2F246787_ItalianStuffedShells_MFS-WD-2x1-1.jpg"
+    },
+    {
+        "name": "Thai Basil Chicken (Pad Krapow Gai)",
+        "description": "The fastest way to get great tasting Thai food is to make it in your own kitchen with this aromatic, flavorful and healthy Thai basil chicken.",
+        "ingredients": [
+            "1 lb (450 g) ground chicken (other ground meat works, too)",
+            "4 to 6 Thai bird’s eye chilis , chopped (depending on spice level desired) (Footnote 1)",
+            "6 cloves garlic , smashed",
+            "Sauce:",
+            "1 tablespoon oyster sauce",
+            "2 teaspoons soy sauce",
+            "2 teaspoons dark soy sauce",
+            "1/2 teaspoon fish sauce (Optional) (Footnote 2)",
+            "1 teaspoon sugar",
+            "Stir Fry:",
+            "1 tablespoon oil",
+            "1/2 yellow onion , large diced",
+            "1/2 cup (4 oz/115 g) green beans , cut into 1” (2.5 cm) pieces",
+            "1 bunch basil , stems removed (Footnote 3)",
+            "Fried eggs (Optional)",
+            "Lime wedges (Optional) (Footnote 4)"
+        ],
+        "instructions": [
+            "",
+            "Mince the chilis and garlic together until a rough paste forms (see the blog post above for step-by-step pictures). You can also blend both together in a small food processor or use a mortar & pestle.",
+            "Combine the sauce ingredients in a small bowl and stir until the sugar is dissolved.",
+            "Add the oil and garlic-chili paste to a large skillet and heat over medium-high heat. Cook until the aromatics are fragrant and the garlic is just barely starting to brown.",
+            "Add the ground chicken. Move the aromatics onto the chicken using your spatula to prevent the aromatics from burning. Spread out the chicken and let it cook without disturbing for 1 minute, to let the bottom brown. Break apart the chicken, let cook, stirring occasionally, until the chicken is almost cooked through and the chicken juices have cooked off, 2 minutes or so. I prefer to keep some larger chunks of chicken without breaking them into a million pieces.",
+            "Pour in the sauce and stir to mix well.",
+            "Add the onion and green beans. Cook for another minute or two, until the sauce is distributed and slightly reduced.",
+            "Turn off the heat and add the basil leaves. Toss until the leaves are wilted.",
+            "Serve hot over rice with a crispy fried egg and a squeeze of lime juice."
+        ],
+        "tags": [
+            "home style"
+        ],
+        "time": {
+            "prep": "15 minutes",
+            "cook": "5 minutes",
+            "active": "",
+            "inactive": "",
+            "ready": "",
+            "total": "20 minutes"
+        },
+        "servings": "4 servings",
+        "image": "https://omnivorescookbook.com/wp-content/uploads/2020/07/200702_Thai-Basil-Chicken_6.jpg"
     }
 ]

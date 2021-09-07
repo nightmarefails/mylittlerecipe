@@ -15,23 +15,22 @@ user_recipe.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             refrences: {
-                model: 'User',
+                model: 'user',
                 key: 'id',
             }
-
         },
         recipe_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'recipe',
+                key: 'id'
+            }
         },
-
-
     },
     {
         sequelize,
         timestamps: false,
-        freezeTableName: true,
-        underscored: true,
         modelName: 'user_recipe',
     }
 );
