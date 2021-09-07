@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class tags extends Model { }
 
-tags.init(
+Tags.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -25,4 +25,4 @@ tags.init(
     }
 );
 
-module.exports = tags;
+module.exports = Tags;

@@ -16,21 +16,19 @@ Recipe.init(
             }
         },
         name: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         ingredients: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
-            unique: true,
-
         },
         instructions: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
 
         },

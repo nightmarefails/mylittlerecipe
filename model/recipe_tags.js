@@ -19,10 +19,13 @@ recipe_tags.init(
                 key: 'id',
             }
         },
-        user_id: {
+        tag_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
+            references: {
+                model: 'tag',
+                key: 'id'
+            }
 
         },
     },
