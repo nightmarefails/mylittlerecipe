@@ -1,0 +1,68 @@
+
+<main class="container">
+    <div class="row">
+        <div class="col">
+            <section id="recipies">
+                {{#each recipes as|recipe|}}
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h2 class="card-title">{{recipe.name}}</h2>
+                            <h3 class="card-subtitle">Author Name</h3>
+                            <p class="card-text">{{recipe.description}}</p>
+                        </div>
+                        <div class=accordion" id="recipe01Accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="recipe01Details">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Recipe Details
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="recipe01Details" data-bs-parent="#recipe01Accordion">
+                                    <div class="accordion-body">
+                                        <div id="recipeData">
+                                            <div class="row m-2">
+                                                <div class="col-auto">
+                                                    <div style="height: 300px;">
+                                                        <img src="http://placehold.it/400x300/CCCCCC/CCCCCC" alt="..."
+                                                            class="img-thumbnail mh-100" />
+                                                    </div>
+                                                </div>
+                                            <div class="col">
+                                                <h2>Recipe Title:</h2>
+                                                <h4>{{recipe.name}}</h4>
+                                                <h3>Posted By:</h3>
+                                                <h4></h4>
+                                                <h4>User Name:</h4>
+                                                <h4></h4>
+                                                <h3>Description:</h3>
+                                                <h4>{{recipe.description}}</h4>
+                                                <h3>Prep Time:</h3>
+                                                <h4>{{recipe.time}}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row m-2">
+                                            <div class="col">
+                                                <h2>Ingredients:</h2>
+                                                <ul id="recipeIngredients">
+                                                    <li>Item 1</li>
+                                                    <li>Item 2</li>
+                                                </ul>
+                                                <h2>Instructions</h2>
+                                                <ol>
+                                                    <li>direction 1</li>
+                                                    <li>direction 2</li>
+                                                </ol>
+                                            </div>
+                                        </div>    
+                                    </div>        
+                                </div>            
+                            </div>                
+                        </div>                    
+                    </div>
+                {{/each}}                            
+            </section>    
+        </div>
+    </div>                    
+</main>                        
