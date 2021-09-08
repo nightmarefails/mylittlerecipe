@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 //TODO: ADD Get by id '/:id'
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const RecipeData = await Recipe.findByPk(req.params.id);
 
