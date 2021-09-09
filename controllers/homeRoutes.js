@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Recipe, User, user_recipe } = require('../model/');
 const { revertRecipeData } = require('../utils/formatData');
 
-router.use('/', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
             include: User
@@ -19,6 +19,24 @@ router.use('/', async (req, res) => {
         res.render('recipe', {
             recipes
         });
+
+    } catch (error) {
+        res.status(500).json(error);
+    }
+    
+})
+
+router.get('/account', async (req, res) => {
+    try {
+        const userData = await User.findByPk(2, {
+            include: Recipe
+        });
+
+        const plainData = userData.get({ plain: true });
+
+        console.log(plainData);
+
+        res.render('account');
 
     } catch (error) {
         res.status(500).json(error);
