@@ -1,0 +1,17 @@
+<main class="container">
+    <div class="row">
+        <div class="col">
+            <section id="recipies">
+                {{#each recipes as | recipe |}}
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h2 class="card-title">{{recipe.name}}</h2>
+                        <h3 class="card-subtitle">{{recipe.users.0.first_name}} {{recipe.users.0.last_name}}</h3>
+                        <p class="card-text">{{recipe.description}}</p>
+                    </div>
+                    <button class="btn btn-warning">Delete</button>
+                {{/each}}
+            </section>
+        </div>
+    </div>
+</main>
