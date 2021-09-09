@@ -32,7 +32,8 @@
             "total": "45 mins "
         },
         "servings": "4",
-        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=3888&h=1944&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6884311.jpg"
+        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=3888&h=1944&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6884311.jpg",
+        "user_id": 1
     },
     {
         "name": "Irresistible Whole Wheat Challah",
@@ -66,7 +67,8 @@
             "total": "1 hr 100 mins "
         },
         "servings": "16",
-        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2260&h=1130&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1515332.jpg"
+        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2260&h=1130&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1515332.jpg",
+        "user_id": 2
     },
     {
         "name": "Italian Sausage Stuffed Shells",
@@ -96,7 +98,8 @@
             "total": ""
         },
         "servings": "8",
-        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=%5B1380%2C550%5D&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F08%2F10%2F246787_ItalianStuffedShells_MFS-WD-2x1-1.jpg"
+        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=%5B1380%2C550%5D&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F08%2F10%2F246787_ItalianStuffedShells_MFS-WD-2x1-1.jpg",
+        "user_id": 3
     },
     {
         "name": "Thai Basil Chicken (Pad Krapow Gai)",
@@ -142,6 +145,7 @@
             "total": "20 minutes"
         },
         "servings": "4 servings",
-        "image": "https://omnivorescookbook.com/wp-content/uploads/2020/07/200702_Thai-Basil-Chicken_6.jpg"
+        "image": "https://omnivorescookbook.com/wp-content/uploads/2020/07/200702_Thai-Basil-Chicken_6.jpg",
+        "user_id": 1
     }
 ]

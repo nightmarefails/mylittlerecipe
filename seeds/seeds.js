@@ -11,23 +11,18 @@ const user_recipeData = require('./user_recipeData.json')
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
-    const recipeData = require('./recipeData.json');
-
     //Data has Arrays when SQL is expecting strings. must go through entries and join the arrays into strings
     let recipes = recipeData.map((data) => {
         return formatRecipeData(data)
     });
 
-    await Recipe.bulkCreate(recipes, {
-        individualHooks: true,
-        returning: true
-    });
+    await Recipe.bulkCreate(recipes);
+
+    await User.bulkCreate(userData);
 
     await Tags.bulkCreate(tagsData)
 
     await recipe_tags.bulkCreate(recipe_tagsData);
-
-    await User.bulkCreate(userData);
 
     await user_recipe.bulkCreate(user_recipeData);
     
