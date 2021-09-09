@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { User } = require("../../model")
 
-<<<<<<< HEAD
-=======
 //TODO: ADD GET all route '/'
 router.get('/', async (req, res) => {
     try {
@@ -31,10 +29,9 @@ router.get('/:id', async (req, res) => {
         res.status(400).json(err);
     }
 });
->>>>>>> 48ef95fba731032f7fc6e320dbdba659776d751b
 
 //TODO: ADD POST '/' to add a user
-user.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const userData = await User.create(req.body);
 
@@ -45,13 +42,8 @@ user.post('/', async (req, res) => {
     }
 });
 
-<<<<<<< HEAD
-//TODO: Add POST '/login'
-
-//TODO: Add POST '/logout'
-=======
 //TODO ADD PUT '/:id' to update a user
-user.put('/', async (req, res) => {
+router.put('/', async (req, res) => {
     try{
         const userData = await User.update(req.body);
         res.status(200).json(userData);
@@ -60,6 +52,5 @@ user.put('/', async (req, res) => {
         res.status(400).json(err);
     }
 })
->>>>>>> 48ef95fba731032f7fc6e320dbdba659776d751b
 
 module.exports = router;

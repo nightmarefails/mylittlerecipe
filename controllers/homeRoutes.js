@@ -17,11 +17,13 @@ router.get('/', async (req, res) => {
         console.log(recipes);
 
         res.render('recipe', {
-            recipes
+            recipes,
+            loggedIn: false
         });
 
     } catch (error) {
         res.status(500).json(error);
+    
     }
     
 })
@@ -32,16 +34,27 @@ router.get('/account', async (req, res) => {
             include: Recipe
         });
 
-        const plainData = userData.get({ plain: true });
+        const user = userData.get({ plain: true });
+        console.log(user);
 
-        console.log(plainData);
-
-        res.render('account');
+        res.render('account', {
+            user
+        });
 
     } catch (error) {
         res.status(500).json(error);
     }
     
+})
+
+router.get('/addrecipe', async(req, res) => {
+    try {
+        
+        res.render('addrecipe')
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error);
+    }
 })
 
 
