@@ -4,8 +4,8 @@ function formatRecipeData(data) {
         name: data.name,
         user_id: data.user_id,
         description: data.description,
-        ingredients: data.ingredients.join(),
-        instructions: data.instructions.join(),
+        ingredients: data.ingredients.join('&'),
+        instructions: data.instructions.join('&'),
         time: data.time.total,
         servings: data.servings,
         image: data.image
@@ -16,8 +16,10 @@ function formatRecipeData(data) {
 
 //Website will use data how the scraper originally builds it. Array for ingredients and instructions
 function revertRecipeData(data) {
-    data.ingredients.split(',');
-    data.instructions.split(',');
+    let newData = data
+    newData.ingredients = data.ingredients.split('&');
+    newData.instructions = data.instructions.split('&');
+    return newData;
 }
 
 module.exports = {

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Recipe, User, user_recipe } = require('../model/');
+const { revertRecipeData } = require('../utils/formatData');
 
 router.use('/', async (req, res) => {
     try {
@@ -7,7 +8,11 @@ router.use('/', async (req, res) => {
             include: User
         });
 
-        const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+        const plainData = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+        const recipes = plainData.map((recipe) => {
+            return revertRecipeData(recipe);
+        });
 
         console.log(recipes);
 

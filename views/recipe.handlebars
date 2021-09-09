@@ -46,13 +46,15 @@
                                     <div class="col">
                                         <h2>Ingredients:</h2>
                                         <ul id="recipeIngredients">
-                                            <li>Item 1</li>
-                                            <li>Item 2</li>
+                                            {{#each recipe.ingredients as | ingredient |}}
+                                            <li>{{ingredient}}</li>
+                                            {{/each}}
                                         </ul>
-                                        <h2>Instructions</h2>
+                                        <h2>Instructions:</h2>
                                         <ol>
-                                            <li>direction 1</li>
-                                            <li>direction 2</li>
+                                            {{#each recipe.instructions as | instruction |}}
+                                            <li>{{instruction}}</li>
+                                            {{/each}}
                                         </ol>
                                     </div>
                                 </div>
