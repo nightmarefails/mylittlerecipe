@@ -1,12 +1,10 @@
 const router = require('express').Router();
 
-//TODO: ADD GET all route '/'
-
-//TODO: ADD GET '/:id' to get user by id
 
 //TODO: ADD POST '/' to add a user
 
-//TODO ADD PUT '/:id' to update a user
+//TODO: Add POST '/login'
 
+//TODO: Add POST '/logout'
 
 module.exports = router;

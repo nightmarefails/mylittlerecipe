@@ -1,27 +1,15 @@
 const User = require('./user');
 const Recipe = require('./recipe');
-const user_recipe = require('./user_recipe');
-const recipe_tags = require('./recipe_tags');
 const Tags = require('./tags');
+const user_recipe = require('./user_recipe')
+const recipe_tags = require('./recipe_tags')
 
 User.belongsToMany(Recipe, {
-    through: user_recipe,
-    foreignKey: 'recipe_id'
+    through: user_recipe
 });
 
-Recipe.belongsTo(User, {
-    through: user_recipe,
-    foreignKey: 'user_id'
-});
-
-Recipe.belongsToMany(Tags, {
-    through: recipe_tags,
-    foreignKey: 'recipe_id'
-});
-
-Tags.belongsToMany(Recipe, {
-    through: recipe_tags,
-    foreignKey: 'tag_id'
+Recipe.belongsToMany(User, {
+    through: user_recipe
 });
 
 module.exports = {

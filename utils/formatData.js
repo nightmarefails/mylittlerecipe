@@ -2,6 +2,7 @@
 function formatRecipeData(data) {
     let formatedData = {
         name: data.name,
+        user_id: data.user_id,
         description: data.description,
         ingredients: data.ingredients.join(),
         instructions: data.instructions.join(),
