@@ -25,7 +25,20 @@ router.get('/', async (req, res) => {
         res.status(500).json(error);
     
     }
-    
+})
+
+router.use('/account', async (req, res) => {
+    try {
+        const userData = await User.findByPk(1, {
+            include: Recipe
+        })
+
+        const user = userData.get({ plain: true });
+
+        res.render('account', {
+            user
+        })
+    }
 })
 
 router.get('/account', async (req, res) => {
