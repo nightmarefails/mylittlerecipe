@@ -10,10 +10,6 @@ Recipe.init(
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,
-            refrences: {
-                model: 'user_recipe',
-                key: 'recipe_id',
-            }
         },
         name: {
             type: DataTypes.TEXT,
@@ -44,7 +40,7 @@ Recipe.init(
         },
         image: {
             type: DataTypes.STRING,
-        },
+        }
     },
     {
         sequelize,

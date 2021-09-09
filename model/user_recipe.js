@@ -11,7 +11,7 @@ user_recipe.init(
             primaryKey: true,
             allowNull: false,
         },
-        user_id: {
+        userId: {
             type: DataTypes.INTEGER,
             allowNull: false,
             refrences: {
@@ -19,7 +19,7 @@ user_recipe.init(
                 key: 'id',
             }
         },
-        recipe_id: {
+        recipeId: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -31,6 +31,7 @@ user_recipe.init(
     {
         sequelize,
         timestamps: false,
+        freezeTableName: true,
         modelName: 'user_recipe',
     }
 );

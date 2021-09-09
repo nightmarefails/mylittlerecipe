@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
 });
 
 //TODO: ADD POST '/' to add a user
-user.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const userData = await User.create(req.body);
 
@@ -43,7 +43,7 @@ user.post('/', async (req, res) => {
 });
 
 //TODO ADD PUT '/:id' to update a user
-user.put('/', async (req, res) => {
+router.put('/', async (req, res) => {
     try{
         const userData = await User.update(req.body);
         res.status(200).json(userData);
@@ -94,3 +94,4 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+
