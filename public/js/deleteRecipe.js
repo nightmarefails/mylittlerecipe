@@ -1,14 +1,14 @@
-const addRecipeHandler = async (event) => {
+const deleteHandler = async (event) => {
     event.preventDefault();
 
     // collect values from the login form
-    const url = document.querySelector('#recipeLink').value.trim();
+    const id = event.target.dataset.id
 
-    if (url) {
+    if (id) {
         // Send a POST request to the API endpoint
-        const response = await fetch('/api/recipes', {
+        const response = await fetch('/api/recipes/delete', {
             method: 'POST',
-            body: JSON.stringify({ url }),
+            body: JSON.stringify({ id }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -23,4 +23,8 @@ const addRecipeHandler = async (event) => {
     }
 };
 
-document.querySelector('#recipeForm').addEventListener('submit', addRecipeHandler)
+const buttons = document.querySelectorAll('.deleteButton');
+
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', deleteHandler)
+};

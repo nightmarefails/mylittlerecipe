@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
         if (req.session && req.session.logged_in) {
             loggedIn = true;
         }
-
+        console.log(recipes);
         res.render('recipe', {
             recipes,
             loggedIn
