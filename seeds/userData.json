@@ -1,20 +1,14 @@
 [
     {
-        "first_name": "Test" ,
-        "last_name": "User1",
-        "email": "test1@test.com",
+        "user_name": "Test1",
         "password": "Password1234"
     },
     {
-        "first_name": "Test" ,
-        "last_name": "User2",
-        "email": "test2@test.com",
+        "user_name": "Test2",
         "password": "Password1234"
     },
     {
-        "first_name": "Test" ,
-        "last_name": "User3",
-        "email": "test3@test.com",
+        "user_name": "Test3",
         "password": "Password1234"
     }
 ]

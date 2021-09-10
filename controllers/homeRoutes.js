@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Recipe, User, user_recipe } = require('../model/');
 const { revertRecipeData } = require('../utils/formatData');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
@@ -14,11 +15,15 @@ router.get('/', async (req, res) => {
             return revertRecipeData(recipe);
         });
 
-        console.log(recipes);
+        let loggedIn = false;
+
+        if (req.session && req.session.logged_in) {
+            loggedIn = true;
+        }
 
         res.render('recipe', {
             recipes,
-            loggedIn: false
+            loggedIn
         });
 
     } catch (error) {
@@ -27,43 +32,30 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.use('/account', async (req, res) => {
+router.get('/account', withAuth, async (req, res) => {
     try {
-        const userData = await User.findByPk(1, {
+        const userData = await User.findByPk(req.session.user_id, {
             include: Recipe
         })
 
         const user = userData.get({ plain: true });
 
         res.render('account', {
-            user
+            user,
+            loggedIn: req.session.logged_in
         })
-    }
-})
-
-router.get('/account', async (req, res) => {
-    try {
-        const userData = await User.findByPk(2, {
-            include: Recipe
-        });
-
-        const user = userData.get({ plain: true });
-        console.log(user);
-
-        res.render('account', {
-            user
-        });
-
     } catch (error) {
+        console.log(error);
         res.status(500).json(error);
     }
-    
 })
 
-router.get('/addrecipe', async(req, res) => {
+router.get('/addrecipe', withAuth, async(req, res) => {
     try {
         
-        res.render('addrecipe')
+        res.render('addrecipe', {
+            loggedIn: req.session.logged_in
+        })
     } catch (error) {
         console.log(error);
         res.status(500).json(error);
