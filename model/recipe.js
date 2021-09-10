@@ -12,8 +12,9 @@ Recipe.init(
             allowNull: false,
         },
         name: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
+            unique: true
         },
         description: {
             type: DataTypes.TEXT,

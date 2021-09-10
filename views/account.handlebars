@@ -8,6 +8,7 @@
                         <h2 class="card-title">{{recipe.name}}</h2>
                         <p class="card-text">{{recipe.description}}</p>
                     </div>
+                    <button class="btn btn-warning deleteButton" data-id="{{recipe.id}}" type="button">Delete Recipe</button>
                 </div>
                 {{/each}}
             </section>
@@ -25,3 +26,4 @@
         </div>
     </div>
 </main>
+<script src="./js/deleteRecipe.js"></script>
