@@ -1,11 +1,14 @@
 # mylittlerecipe
 
-Project Title:
+Website URL:
+---
+
+Website Name:
 
 My Little Recipe - Cooking Is MAGIC!!!
 ---
 
-Project Description: 
+Website Description: 
 
 The website allows users to find recipes and save them to a personal account
 for later use. Users are also able to rate the saved recipes and submit personal recipes to the site.
@@ -27,13 +30,17 @@ I want to share personal recipes and see other members' recipes
 
 User Instructions:
 
-
+Create a username and password 
+Browse recipes and save to user profile
+Submit recipes by copy and pasting URL from website(s)
+Rate recipes based on preparation and taste
+---
 
 
 Technologies Used: 
 
 Bootstrap UI
-Spoonnacular API
+Spoonacular API
 Website Scraper
 ---
 
@@ -42,8 +49,9 @@ Project Challenges:
 Pulling recipes from websites
 Using handlebars.js 
 ----
-
-
 Future Plans:
+
+Grant user's the ability to upload cooking videos
+---
 
 
