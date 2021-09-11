@@ -1,4 +1,4 @@
-const addRecipeHandler = async (event) => {
+const searchHandler = async (event) => {
     event.preventDefault();
 
     // collect values from the login form
@@ -19,8 +19,8 @@ const addRecipeHandler = async (event) => {
             alert(response.statusText);
         }
     } else {
-        alert("Please enter a Url")
+        alert("Please enter a url")
     }
 };
 
-document.querySelector('#recipeForm').addEventListener('submit', addRecipeHandler)
+document.querySelector('#recipeForm').addEventListener('submit', searchHandler)
