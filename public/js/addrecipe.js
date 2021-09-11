@@ -1,14 +1,14 @@
-const addRecipeHandler = async (event) => {
+const searchHandler = async (event) => {
     event.preventDefault();
 
     // collect values from the login form
-    const url = document.querySelector('#recipeLink').value.trim();
+    const name = document.querySelector('#recipeName').value.trim();
 
     if (url) {
         // Send a POST request to the API endpoint
         const response = await fetch('/api/recipes', {
             method: 'POST',
-            body: JSON.stringify({ url }),
+            body: JSON.stringify({ name }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -19,8 +19,8 @@ const addRecipeHandler = async (event) => {
             alert(response.statusText);
         }
     } else {
-        alert("Please enter a Url")
+        alert("Please enter a recipe name")
     }
 };
 
-document.querySelector('#recipeForm').addEventListener('submit', addRecipeHandler)
+document.querySelector('#recipeForm').addEventListener('submit', searchHandler)

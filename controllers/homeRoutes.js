@@ -1,9 +1,13 @@
 const router = require('express').Router();
 const { Recipe, User, user_recipe } = require('../model/');
+const { Op } = require('sequelize');
 const { revertRecipeData } = require('../utils/formatData');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+
+
+
     try {
         const recipeData = await Recipe.findAll({
             include: User
@@ -28,9 +32,45 @@ router.get('/', async (req, res) => {
 
     } catch (error) {
         res.status(500).json(error);
-    
+
     }
 })
+
+router.get('/search/:name', async (req, res) => {
+    try {
+        const recipeData = await Recipe.findAll({
+            where: {
+                name: {
+                    [Op.like]: `%${req.params.name}%`
+                }
+            },
+            include: User
+        });
+
+        const plainData = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+        const recipes = plainData.map((recipe) => {
+            return revertRecipeData(recipe);
+        });
+
+        let loggedIn = false;
+
+        if (req.session && req.session.logged_in) {
+            loggedIn = true;
+        }
+        console.log(recipes);
+        res.render('recipe', {
+            recipes,
+            loggedIn
+        });
+
+    } catch (error) {
+        res.status(500).json(error);
+
+    }
+})
+
+
 
 router.get('/account', withAuth, async (req, res) => {
     try {
@@ -50,9 +90,11 @@ router.get('/account', withAuth, async (req, res) => {
     }
 })
 
-router.get('/addrecipe', withAuth, async(req, res) => {
+
+
+router.get('/addrecipe', withAuth, async (req, res) => {
     try {
-        
+
         res.render('addrecipe', {
             loggedIn: req.session.logged_in
         })

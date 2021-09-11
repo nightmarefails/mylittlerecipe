@@ -65,5 +65,19 @@
                 {{/each}}
             </section>
         </div>
+        <div class="col m-2 card">
+            <div class="card-body">
+                <h2>Search</h2>
+                <form id="searchForm"> 
+                    <div class="mb-3">
+                        <label for="recipeName" class="form-label">Recipe Name:</label>
+                        <input type="text" class="form-control" id="recipeName" aria-describedby="recipeName">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
     </div>
 </main>
+<script src="./js/search.js"></script>
+<script src="../js/search.js"></script>
