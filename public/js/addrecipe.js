@@ -2,7 +2,7 @@ const searchHandler = async (event) => {
     event.preventDefault();
 
     // collect values from the login form
-    const name = document.querySelector('#recipeLink').value.trim();
+    const url = document.querySelector('#recipeLink').value.trim();
 
     if (url) {
         // Send a POST request to the API endpoint
