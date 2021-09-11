@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Recipe, User, user_recipe } = require('../model/');
 const { revertRecipeData } = require('../utils/formatData');
 
-router.use('/', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
             include: User
@@ -17,11 +17,13 @@ router.use('/', async (req, res) => {
         console.log(recipes);
 
         res.render('recipe', {
-            recipes
+            recipes,
+            loggedIn: false
         });
 
     } catch (error) {
         res.status(500).json(error);
+    
     }
 })
 
@@ -36,6 +38,35 @@ router.use('/account', async (req, res) => {
         res.render('account', {
             user
         })
+    }
+})
+
+router.get('/account', async (req, res) => {
+    try {
+        const userData = await User.findByPk(2, {
+            include: Recipe
+        });
+
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('account', {
+            user
+        });
+
+    } catch (error) {
+        res.status(500).json(error);
+    }
+    
+})
+
+router.get('/addrecipe', async(req, res) => {
+    try {
+        
+        res.render('addrecipe')
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error);
     }
 })
 
