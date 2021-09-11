@@ -8,7 +8,7 @@ const searchHandler = async (event) => {
         // Send a POST request to the API endpoint
         const response = await fetch('/api/recipes', {
             method: 'POST',
-            body: JSON.stringify({ name }),
+            body: JSON.stringify({ url }),
             headers: { 'Content-Type': 'application/json' },
         });
 
